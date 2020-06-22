@@ -1,0 +1,49 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "bird",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.43333333333333335,
+  "sample": 30,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "0fa887c0-7e30-4fa5-be5a-7edd15fce23d"
+            }
+          },
+          {
+            "frame": 0.1,
+            "value": {
+              "__uuid__": "3e920161-901f-4b81-b9ef-f7c4f19705f6"
+            }
+          },
+          {
+            "frame": 0.2,
+            "value": {
+              "__uuid__": "4130cc91-716b-4dc4-8582-23f82dba9a14"
+            }
+          },
+          {
+            "frame": 0.3,
+            "value": {
+              "__uuid__": "3e920161-901f-4b81-b9ef-f7c4f19705f6"
+            }
+          },
+          {
+            "frame": 0.4,
+            "value": {
+              "__uuid__": "0fa887c0-7e30-4fa5-be5a-7edd15fce23d"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
