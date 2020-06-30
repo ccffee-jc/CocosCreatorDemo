@@ -14,6 +14,10 @@ cc.Class({
         canvas:{
             type: cc.Node,
             default: null
+        },
+        pipes:{
+            type: cc.Node,
+            default: null
         }
     },
 
@@ -23,12 +27,35 @@ cc.Class({
         this.speed_y = 0;
 
         this.canvas.on(cc.Node.EventType.TOUCH_START, this.onTouchStart, this);
+
+        var manager = cc.director.getCollisionManager();
+
+        manager.enabled = true;
+
+        // manager.enabledDebugDraw = true;
     },
 
     onTouchStart(event) {
-        console.log("111");
         this.speed_y = this.jump_speed;
-        
+    },
+
+    onCollisionEnter: function (other, self) {
+        this.gameover();
+    },
+
+    gameover: function(){
+        this.node.y = 0;
+
+        var pipesChildren = this.pipes.children;
+
+        for(let i = 0; i < pipesChildren.length; i++){
+            pipesChildren[i].destroy();
+        }
+
+        this.pipes.getComponent("pipes").onLoad();
+
+        this.speed_y = 0;
+
     },
 
     start () {
